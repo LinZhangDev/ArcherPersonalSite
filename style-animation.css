@@ -1,0 +1,85 @@
+/* ================
+Keyframes Animation
+================ */
+
+/* Nav li animation on nav-wrapper .active */
+@keyframes navLoad {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* Div animation slideleft */
+@keyframes slideleft-animation {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
+
+/* Div animation slideright */
+@keyframes slideright-animation {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+}
+
+/* Div animation slideup */
+@keyframes slideup-animation {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+/* Div animation slidedown */
+@keyframes slidedown-animation {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+/* Glowing contact me icon */
+@keyframes glowing {
+  25% {
+    color: white;
+  }
+  50% {
+    color: red;
+  }
+  75% {
+    color: white;
+  }
+}
+
+/* Project card show on scroll animation */
+.project1,
+.project3{
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: 1s;
+}
+.project2,
+.project4{
+    transform: translateX(30px);
+    opacity: 0;
+    transition: 1s;
+}
+.show-project{
+    transform: translate(0) !important;
+    opacity: 1 !important;
+}
+
+/* Footer icon spinning effect */
+@keyframes footerspin {
+  100% {
+    transform: rotate(-360deg);
+  }
+}

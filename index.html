@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <title>Archer Zhang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-animation.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.1-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <section id="body-wrapper">
+        <nav class="nav-wrapper inactive">
+            <div  id="nav-wrapper-ul">
+                <ul>
+                    <li class="current"><a href="#section-home" onclick="removeNavActive()">me</a></li>
+                    <li><a href="#section-project-banner" onclick="removeNavActive()">ojects</a></li>
+                    <li><a href="#section-about" onclick="removeNavActive()">out Me</a></li>
+                    <li><a href="#section-contact" onclick="removeNavActive()">ntact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="section-nav-top">
+            <div class="section-nav-top-wrapper">
+                <ul>
+                    <li><a href="#section-home">me</a></li>
+                    <li><a href="#section-project-banner">ojects</a></li>
+                    <li><a href="#section-about">out Me</a></li>
+                    <li><a href="#section-contact">ntact Me</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="section-home" class="section-content">
+            <button class="nav-ham">
+                <div class="nav-ham-btn"></div>
+            </button>
+            <div class="section-home-wrapper">
+                <div class="section-home-div section-home-div-right">
+                    <div class="card home-card">
+                        <a href="#section-contact" class="home-contact">Contact Me </br> <i class="far fa-envelope"></i></a>
+                        <span class="circle"></span>
+                        <img src="./img/section-home-right.png" class="home-img">
+                    </div>    
+                </div>
+                <div class="section-home-div section-home-div-left">
+                    <h1 class="section-home-name">RCHER</br> ZHANG</h1>      
+                    <h4 class="section-home-description">
+                        # Full Stack Developer </br></br> 
+                        # Web Designer </br></br> 
+                        # Skilled in - <span class="home-content-span"></span><span class="home-content-cursor">&nbsp;</span>
+                    </h4>        
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/archer-zhang-18b6961b4"target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://github.com/"target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>    
+                        <li><a href="https://wx.qq.com/"target="_blank" rel="noopener noreferrer"><i class="fab fa-weixin"></i></a></li>
+                        <li><a href="https://www.facebook.com/"target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a></li>                              
+                    </ul>      
+                </div>
+            </div>
+        </section>
+        <section id='section-project-banner' class="section-project-banner">
+            <div class="project-banner-wrapper">
+                <h1>
+                    Projects
+                </h1>
+                <h3>
+                    <a href="#section-contact">Contact me</a> now and let us build our unique websites & mobile apps together.
+                </h3>
+                <div class="slider">
+                    <div class="slides">
+                        <!-- radio btns, display none -->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <!-- 4 sliders -->
+                        <div class="slide slide1 first">
+                            <h1>Neko </br> Sushi</h1>
+                        </div>
+                        <div class="slide slide2">
+                            <h1>Skill </br> Shop</h1>
+                        </div>
+                        <div class="slide slide3">
+                            <h1>Todo </br> List</h1>
+                        </div>
+                        <div class="slide slide4">
+                            <h1>Dev </br> Site</h1>
+                        </div>
+                        
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+                    <!-- labels for hidden radio btns, effect when label clicked -->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                </div>
+                <div class="project-list">
+                    <div class="project-card project1">
+                        <div class="project-card-img project-card-img1"></div>
+                        <h2 class="project-card-h2">Todo List</h2>
+                        <p class="project-card-p">Allow users to insert / store / remove todo tasks</p>
+                        <a href="#home" class="project-card-a">View Site</a>
+                    </div>
+                    <div class="project-card project2">
+                        <div class="project-card-img project-card-img2"></div>
+                        <h2 class="project-card-h2">Personal Portfoilo</h2>
+                        <p class="project-card-p">An overview of Archer's current works</p>
+                        <a href="#home" class="project-card-a">View Site</a>
+                    </div>
+                    <div class="project-card project3">
+                        <div class="project-card-img project-card-img3"></div>
+                        <h2 class="project-card-h2">Skill Shop</h2>
+                        <p class="project-card-p">Online shop which sort data from localstorage & database</p>
+                        <a href="#home" class="project-card-a">View Site</a>
+                    </div>
+                    <div class="project-card project4">
+                        <div class="project-card-img project-card-img4"></div>
+                        <h2 class="project-card-h2">Neko Sushi</h2>
+                        <p class="project-card-p">Responsive restaurant landing page</p>
+                        <a href="#home" class="project-card-a">View Site</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id='section-about' class="section-about">
+            <div class="about-wrapper">
+                <div class="section-about-div about-div-top">
+                    <h1>About Me</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis cupiditate atque natus sequi quibusdam, veritatis quasi quisquam blanditiis distinctio dolore velit, similique doloremque sed suscipit iusto nisi culpa magni eveniet?</p>
+                    <button onclick="window.location.href='https://docs.google.com/document/d/1RNntHpPSOWOyB25_4mZqwL5MWqysspVmHZ_Uxx3nYM0/edit?usp=sharing'";>
+                        View My Resume 
+                        <i class="far fa-arrow-alt-circle-right"></i>
+                    </button>
+                    <div class="about-gif"></div>
+                </div>
+            </div>
+        </section>
+        <section id="section-contact" class="section-contact">
+            <div class="contact-wrapper">
+                <h1>Contact Me</h1>
+                <div class="contact-left">
+                    <div class="contact-left-phone"><i class="fas fa-phone-volume"></i><h4>(604)-767-5568</h4></div>
+                    <div class="contact-left-email"><i class="fas fa-envelope-open-text"></i><h4>allenzhang59299@hotmail.com</h4></div>
+                    <div id="map"></div>
+                </div>
+                <h4 class="contact-or">{- or -}</h4>
+                <div class="contact-right">
+                    <form action="" class="contact-form" method="POST">
+                        <div class="contact-form-name contact-form-required">
+                            <input type="text" name="name" class="input-name" required/>
+                            <label for="name" class="label-name"><span class="content-name">Name</span></label>
+                        </div>
+                        <div class="contact-form-email contact-form-required">
+                            <input type="text" name="email" class="input-email" required/>
+                            <label for="name" class="label-name label-email"><span class="content-name content-email">Email <span class="email-error"> (*Please enter a valid email)</span></span></label>
+                        </div>
+                        <div class="contact-form-message contact-form-required">
+                            <textarea type="textarea" name="message" class="input-message" placeholder="Please leave you message.."></textarea>
+                        </div>
+                        <div class="contact-form-submit contact-form-required">
+                            <button type="submit" class="contact-form-required contact-btn">Submit</button>
+                        </div>                      
+                    </form>
+                </div>
+            </div>
+            <div class="placeholder"></div>
+        </section>
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-img footer-div">
+                    <img src="./img/footer-img.PNG" alt="lin-logo" class="footer-img-logo">
+                </div>
+                <div class="footer-social footer-div">
+                    <h4>Social Media</h4>
+                    <ul class="footer-social-ul">
+                        <li><a href="https://www.linkedin.com/in/archer-zhang-18b6961b4"target="_blank" rel="noopener noreferrer">#Linkedin</a></li>
+                        <li><a href="https://github.com/"target="_blank" rel="noopener noreferrer">#Github</a></li>    
+                        <li><a href="https://wx.qq.com/"target="_blank" rel="noopener noreferrer">#Wechat</a></li>
+                        <li><a href="https://www.facebook.com/"target="_blank" rel="noopener noreferrer">#Facebook</a></li>   
+                    </ul>
+                </div>
+                <div class="footer-rights footer-div">
+                    <div class="footer-right-wrapper">
+                        <h3 class="footer-copyright">@2020-2021</h3>
+                        <h3>All Rights Rreserved</h3>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/fullpage.js"></script>
+    <script>
+        $("#nav-wrapper-ul").onePageNav({
+            currentClass: "current",
+            changeHash: false,
+            scrollSpeed: 100, /* html scrolling speed, can be effected by scroll behaviour smooth */
+            scrollThreshold: 0.1,
+            filter: "",
+            easing: "swing",
+        });
+    </script>
+    <script src="./js/vanilla-tilt-min.js"></script>
+    <script src="./js/animation.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".card"), {
+            max: 12,
+            speed: 400
+        });
+        VanillaTilt.init(document.querySelectorAll(".card"));
+    </script>
+    <script>
+        function initMap(){
+            const location = {lat:49.104599,lng:-122.823509}
+            const map=new google.maps.Map(document.getElementById('map'),{
+                zoom:10,
+                center:location
+            })
+            var marker=new google.maps.Marker(
+                {position:location,map:map}
+            );
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBATAe_VzI8WQHbu-KiVrYMWd35YBBpx4&callback=initMap" type="text/javascript"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>

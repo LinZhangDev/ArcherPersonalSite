@@ -1,0 +1,1377 @@
+/* ================
+Global style
+================ */
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  /*  outline: 1px solid red; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden; /* life saver, hidden unwanted overflow left to right */
+}
+
+body.navActive {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#body-wrapper {
+  overflow: hidden;
+  width: 100vw;
+}
+
+h1,
+h2 {
+  font-family: "Coda Caption", sans-serif;
+}
+
+h3,
+h4,
+p,
+a,
+li,
+button {
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a,
+li,
+button {
+  cursor: pointer;
+  border: none;
+}
+
+/* ================
+NAV
+================ */
+nav {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: #262626;
+  z-index: 89;
+  transition: 0.3s;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.nav-wrapper {
+  overflow: hidden;
+}
+
+.nav-wrapper.inactive {
+  transform: translateY(-100%);
+}
+
+.nav-wrapper.active {
+  transform: translateY(0);
+}
+
+.nav-wrapper ul {
+  list-style: none;
+}
+
+.nav-wrapper li {
+  margin: 60px 0;
+  font-size: 35px;
+}
+
+/* Nav li animation on nav-wrapper .active */
+
+.nav-wrapper.active li {
+  animation: navLoad 1s ease-in-out forwards;
+}
+
+/* End */
+
+.nav-wrapper li:nth-child(1)::before {
+  content: "Ho";
+  color: orangered;
+}
+
+.nav-wrapper li:nth-child(2)::before {
+  content: "Pr";
+  color: orangered;
+}
+.nav-wrapper li:nth-child(3):before {
+  content: "Ab";
+  color: orangered;
+}
+.nav-wrapper li:nth-child(4):before {
+  content: "Co";
+  color: orangered;
+}
+
+.nav-wrapper a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-wrapper a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: yellow;
+  display: block;
+  margin-top: 15px;
+  transition: all 0.3s;
+}
+
+.nav-wrapper a:hover::after {
+  width: 100%;
+}
+
+.nav-ham {
+  height: 50px;
+  width: 60px;
+  background-color: #262626;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 95;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.nav-ham:hover {
+  transform: rotate(180deg);
+}
+
+.nav-ham-btn {
+  width: 50%;
+  height: 5px;
+  background-color: transparent;
+}
+
+.nav-ham-btn::before,
+.nav-ham-btn::after {
+  content: "";
+  height: 4px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.nav-ham-btn::before {
+  transform: translateY(-5px);
+  width: 50%;
+}
+.nav-ham.active .nav-ham-btn::before {
+  transform: rotate(-45deg);
+}
+.nav-ham-btn::after {
+  transform: translateY(5px);
+  width: 40%;
+}
+.nav-ham.active .nav-ham-btn::after {
+  transform: rotate(45deg);
+  width: 50%;
+}
+.current a {
+  color: orangered;
+}
+/* ================
+Section Nav Top
+================ */
+.section-nav-top {
+  width: 100vw;
+  height: 70px;
+  background-color: #262626;
+  overflow: hidden;
+}
+.section-nav-top-wrapper {
+  display: none;
+  overflow: hidden;
+}
+/* ================
+Section Home
+================ */
+
+/* ======layout====== */
+.section-home-wrapper {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin: 10px auto 0 auto;
+  background-color: #fbfbfd;
+}
+
+.section-home-div {
+  width: 100%;
+  height: auto;
+}
+
+/* ======section-home-div-left====== */
+.section-home-div-left {
+  width: 80%;
+  margin: 50px auto;
+  animation: slideup-animation 1s forwards;
+}
+
+.section-home-div-left h1 {
+  margin: 20px 0 50px 0;
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+}
+
+.section-home-name::before {
+  content: "A";
+  font-size: 3.5rem;
+  color: orangered;
+}
+
+.section-home-description {
+  font-size: 1.3rem;
+  line-height: 1rem;
+  animation: slideup-animation 1.5s forwards;
+}
+
+.home-content-span {
+  color: orangered;
+}
+
+.home-content-cursor {
+  border-right: solid grey 2px;
+}
+
+.section-home-div-left ul {
+  margin: 70px 0 0 0;
+  list-style: none;
+  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  animation: slideup-animation 2s forwards;
+}
+
+.section-home-div-left li {
+  font-size: 30px;
+  display: block;
+}
+
+.section-home-div-left .fab {
+  transition: 0.2s ease-in-out;
+}
+
+.fa-linkedin-in {
+  color: #0e76a8;
+}
+
+.fa-github {
+  color: #252525;
+}
+.fa-weixin {
+  color: #1aad19;
+}
+.fa-facebook {
+  color: #3b5998;
+}
+
+.section-home-div-left .fab:hover {
+  color: orangered;
+}
+
+/* ======section-home-div-right====== */
+.section-home-div-right {
+  transform: preserve-3d;
+  width: 95%;
+  padding-top: 30px;
+  animation: slideright-animation 1s forwards;
+}
+
+.card {
+  position: relative;
+  width: 85%;
+  height: 430px;
+  margin: 0 auto;
+  background-color: #232323;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+  box-shadow: 0px 10px 20px 0px rgba(8, 6, 89, 0.1);
+}
+
+.card::before,
+.card::after,
+.home-contact,
+.card span,
+.home-img {
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.card::before,
+.card::after {
+  left: 20px;
+  font-size: 6rem;
+  font-weight: 900;
+  opacity: 0;
+  color: yellow;
+  font-family: "Coda Caption", sans-serif;
+}
+
+.card::before {
+  content: "Web";
+  top: 20px;
+}
+
+.card::after {
+  content: "DEV";
+  bottom: 20px;
+}
+
+.card:hover::before,
+.card:hover::after {
+  opacity: 0.2;
+}
+
+.home-contact {
+  bottom: 20px;
+  left: 50%;
+  color: white;
+  background: #262626;
+  padding: 7px 25px;
+  text-decoration: none;
+  z-index: 10;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 25px;
+  transform: translate3d(-50%, -20%, 50px);
+  font-size: 16px;
+}
+
+.fa-envelope {
+  font-size: 22px;
+  animation: glowing 3s infinite ease-in-out;
+}
+
+.home-contact:hover {
+  background-color: #3d3d3d;
+}
+
+.card span {
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: yellow;
+  z-index: 10;
+  transform: translate3d(-50%, -55%, 0px);
+}
+
+.home-img {
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  transition: 0.5s;
+  z-index: 15;
+  transform: translate3d(-50%, -50%, 50px);
+}
+
+/* ================
+Section Project Banner
+================ */
+
+#section-project-banner {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin: 10px auto 0 auto;
+  background-color: #1f1f1d;
+  overflow: hidden;
+}
+
+.project-banner-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.project-banner-wrapper h1 {
+  color: white;
+  font-size: 30px;
+  margin: 80px auto 0 auto;
+}
+
+.project-banner-wrapper h3 {
+  color: grey;
+  font-size: 20px;
+  margin: 60px auto;
+}
+
+.project-banner-wrapper h3 a {
+  color: orangered;
+  font-size: 20px;
+}
+
+.slider {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto 80px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.slides input {
+  display: none;
+}
+
+/* silde details */
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide1 {
+  background: url(./img/neko-sushi.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.slide2 {
+  background: url(./img/web-skill-shop.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.slide3 {
+  background: url(./img/todo-list.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.slide4 {
+  background: url(./img/archer-portfoilo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.slide h1 {
+  font-size: 55px;
+  margin-left: 20px;
+  line-height: 60px;
+  -webkit-text-stroke: 2px black;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 80%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  margin: 0 20px;
+}
+
+.manual-btn:hover {
+  background-color: orangered;
+}
+
+/* label for manual slider radios, margin slide left */
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/* auto slider radios */
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 80%;
+  margin-top: 260px;
+  justify-content: center;
+}
+
+.navigation-auto div {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  margin: 0 20px;
+}
+
+/*auto slider radios,change bg color */
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: orangered;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: orangered;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: orangered;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: orangered;
+}
+
+/*project - list */
+.project-list {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.project-card {
+  width: 100%;
+  height: 450px;
+  display: grid;
+  background-color: #3d3d3d;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  background-color: #4b4b4b;
+}
+.project-card:hover .project-card-img {
+  transform: scale(1.1);
+}
+.project-card-img {
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: aliceblue;
+  transition: 0.3s;
+}
+
+.project-card-img1 {
+  background: url(./img/todo-list.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.project-card-img2 {
+  background: url(./img/archer-portfoilo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.project-card-img3 {
+  background: url(./img/web-skill-shop.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.project-card-img4 {
+  background: url(./img/neko-sushi.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.project-card-h2,
+.project-card-p,
+.project-card-a {
+  margin: 0 20px;
+  color: white;
+}
+
+.project-card-p {
+  color: gray;
+}
+
+/* ================
+Section About
+================ */
+#section-about-div {
+  width: 100%;
+  display: grid;
+  background-color: #fbfbfd;
+  margin: 10px auto 0 auto;
+}
+
+.about-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.about-div-top {
+  width: 100%;
+}
+
+.about-div-top h1 {
+  font-size: 30px;
+  margin: 80px auto 60px auto;
+}
+
+.about-div-top button {
+  border-style: none;
+  margin: 60px 0 0 0;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.about-div-top button:hover {
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0px 5px 10px 0px rgba(8, 6, 89, 0.1);
+}
+
+.fa-arrow-alt-circle-right {
+  font-size: 15px;
+  padding-left: 10px;
+  color: rgb(37, 171, 255);
+}
+
+.about-gif {
+  width: 100%;
+  height: 250px;
+  margin: 50px auto;
+  background: url(./img/about.gif);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+/* ================
+Section Contact
+================ */
+.section-contact {
+  width: 100%;
+  background-color: #fbfbfd;
+}
+.contact-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.contact-wrapper h1 {
+  font-size: 30px;
+  margin: 80px auto 60px auto;
+}
+
+.contact-left {
+  width: 100%;
+}
+.contact-left-phone,
+.contact-left-email {
+  display: flex;
+  width: 100;
+  border-bottom: white 4px solid;
+  margin: 30px auto 0 auto;
+  padding-bottom: 10px;
+}
+
+.fa-phone-volume,
+.fa-envelope-open-text {
+  font-size: 20px;
+}
+.contact-left h4 {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  padding-left: 20px;
+}
+.contact-or {
+  width: 100%;
+  text-align: center;
+  color: gray;
+  margin: 20px auto;
+}
+/* Google Map Api */
+#map {
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+}
+/*contact form*/
+.contact-form {
+  background-color: white;
+  border-radius: 10px;
+}
+.contact-form-required {
+  width: 90%;
+  margin: 10px auto;
+  height: 50px;
+  position: relative;
+}
+.contact-form-message {
+  height: 250px;
+}
+
+.contact-form input,
+textarea {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  padding-left: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: none;
+  box-sizing: border-box; /* prevent input box from resizing when padding */
+  outline: none; /* remove input box outline */
+}
+
+.input-message {
+  resize: none;
+  padding: 20px 10px 10px 5px;
+  border-bottom: 1px solid rgb(94, 94, 94);
+}
+.contact-form label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid rgb(94, 94, 94);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  color: rgb(95, 95, 95);
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus + .label-name .content-name,
+.contact-form input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  left: 0;
+  font-size: 14px;
+  color: rgb(37, 171, 255);
+}
+
+.email-error {
+  color: red;
+  font-size: 12px;
+  transition: .2s;
+  visibility: hidden;
+}
+
+.email-error-active{
+  visibility: visible !important;
+}
+
+.contact-form-submit {
+  height: 80px;
+}
+
+.contact-btn {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+}
+.contact-btn:hover {
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0px 5px 10px 0px rgba(8, 6, 89, 0.1);
+}
+/* placeholder for section-contact bottom spacing */
+.placeholder {
+  width: 100%;
+  height: 50px;
+}
+
+/* ================
+Footer
+================ */
+footer {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #262626;
+}
+.footer-wrapper {
+  width: 80%;
+  height: 100%;
+  display: grid;
+  margin: 0 auto;
+}
+.footer-div {
+  margin: 50px auto 0 auto;
+}
+.footer-img {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  margin: 50px auto 0 auto;
+}
+
+/* footer img spinning animation -- start*/
+.footer-img-logo {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  z-index: 70;
+}
+.footer-img::before {
+  content: "";
+  background-image: conic-gradient(yellow 30deg, #262626 120deg);
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  left: -25%;
+  top: -25%;
+  animation: footerspin 2.5s infinite linear;
+  z-index: 1;
+}
+
+/* footer img spinning animation -- end*/
+
+/* footer social list*/
+.footer-social {
+  width: 100%;
+  text-align: center;
+}
+footer h4 {
+  color: white;
+  font-size: 18px;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  margin: 20px 0;
+}
+footer ul li a {
+  color: rgb(196, 196, 196);
+}
+
+/* footer rights*/
+.footer-rights {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+footer h3 {
+  color: rgb(196, 196, 196);
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.footer-copyright::after {
+  content: " Archer (Lin) Zhang";
+  color: white;
+}
+
+/* ================
+SmartPhone  ------>  Tablets #####################################################################################################################################################################
+================ */
+
+@media screen and (min-width: 480px) and (max-device-width: 768px) {
+  /* ================
+Section Home
+================ */
+
+  .section-home-div-left {
+    width: 60%;
+  }
+  .section-home-div-right {
+    width: 75%;
+  }
+
+  /* ================
+Section Project Banner
+================ */
+  .project-banner-wrapper {
+    width: 70%;
+  }
+  /* ================
+Section About
+================ */
+  .about-wrapper {
+    width: 70%;
+  }
+  /* ================
+Section Contact
+================ */
+  .contact-wrapper {
+    width: 70%;
+  }
+}
+
+/* ================
+TABLETS  -----> Laptops #################################################################################################################################################################################
+================ */
+@media screen and (min-width: 768px) {
+  /* ================
+Section Home - wrapper: 95%
+================ */
+
+  /* ======layout====== */
+  #section-home {
+    background-color: #fbfbfd;
+    margin: 10px auto 0 auto;
+    overflow: hidden;
+  }
+  .section-home-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+    padding: 5vh 0;
+    margin: 0 auto;
+  }
+
+  .section-home-div {
+    width: 100%;
+    height: 100%;
+  }
+  /* ======section-home-div-left====== */
+  .section-home-div-left {
+    width: 70%;
+    display: grid;
+    align-items: center;
+  }
+  .section-home-name {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .section-home-name::before {
+    font-size: 3.5rem;
+  }
+
+  /* ======section-home-div-right====== */
+  .section-home-div-right {
+    padding: 0;
+  }
+  .card {
+    height: 100%;
+    max-height: 500px;
+    max-width: 400px;
+  }
+  .card::before,
+  .card::after {
+    opacity: 0.2;
+  }
+  .card span {
+    width: 250px;
+    height: 250px;
+  }
+  .home-contact {
+    line-height: 30px;
+    font-size: 18px;
+  }
+
+  .home-img {
+    width: 120%;
+  }
+
+  /* ================
+Section Project Banner  - wrapper: 85%
+================ */
+
+  .project-banner-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .slider {
+    margin: 0 auto 50px auto;
+  }
+
+  .slide h1 {
+    font-size: 70px;
+    margin-left: 15%;
+    line-height: 80px;
+    -webkit-text-stroke: 2px #262626;
+  }
+
+  /* auto slider radios */
+
+  .navigation-auto {
+    width: 55%;
+  }
+
+  /* manual slider radios */
+
+  .navigation-manual {
+    width: 55%;
+  }
+
+  /*project - list */
+  .project-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    grid-gap: 50px;
+    padding-bottom: 80px;
+  }
+  .project-card {
+    width: 100%;
+    max-width: 550px;
+    height: 450px;
+    display: grid;
+    background-color: #3d3d3d;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    transition: 0.2s;
+  }
+
+  /* ================
+Section About  - wrapper: 75%
+================ */
+  .about-wrapper {
+    width: 75%;
+  }
+
+  .about-gif {
+    height: 300px;
+    margin: 70px auto;
+  }
+
+  /* ================
+Section Contact  - wrapper: 100%
+================ */
+  .contact-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-left {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .contact-wrapper h1 {
+    grid-column: 4/1;
+  }
+  .contact-or {
+    display: none;
+  }
+  /* Google Map Api */
+  #map {
+    height: 270px;
+    margin-top: 50px;
+  }
+  /*contact form*/
+  .contact-form {
+    width: 80%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .contact-form-required {
+    height: 60px;
+  }
+  .contact-form-message {
+    height: 250px;
+  }
+  .contact-form input,
+  textarea {
+    font-size: 16px;
+  }
+  .contact-form-submit {
+    height: 80px;
+  }
+
+  .contact-btn {
+    height: 45px;
+    transition: 0.2s;
+  }
+
+  .placeholder {
+    height: 70px;
+  }
+
+  /* ================
+Footer - wrapper: 85%
+================ */
+  .footer-wrapper {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 50px;
+  }
+  .footer-div {
+    margin-top: 50px;
+  }
+
+  /* footer social list*/
+  .footer-social {
+    text-align: start;
+    display: grid;
+    justify-content: center;
+  }
+  footer ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 0;
+  }
+  footer ul li a {
+    transition: 0.2s;
+    padding-right: 20px;
+  }
+  footer ul li a:hover {
+    color: white;
+  }
+
+  /* footer rights*/
+  .footer-rights {
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    margin-bottom: 0px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ================
+Labtop13  -----> Laptops15 #################################################################################################################################################################################
+================ */
+@media screen and (min-width: 1025px) {
+  /* ================
+Global style
+================ */
+
+  /* ================
+Section Nav Top - wrapper: 100%
+================ */
+  .section-nav-top {
+    width: 100vw;
+    height: 65px;
+    background-color: #262626;
+    z-index: 99;
+    position: absolute;
+  }
+  .section-nav-top-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-nav-top-wrapper ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .section-nav-top-wrapper li {
+    margin: 0 50px;
+    font-size: 17px;
+    text-align: center;
+  }
+  .section-nav-top-wrapper a {
+    color: white;
+    text-decoration: none;
+  }
+  .section-nav-top-wrapper li:nth-child(1)::before {
+    content: "Ho";
+    color: orangered;
+  }
+
+  .section-nav-top-wrapper li:nth-child(2)::before {
+    content: "Pr";
+    color: orangered;
+  }
+  .section-nav-top-wrapper li:nth-child(3):before {
+    content: "Ab";
+    color: orangered;
+  }
+  .section-nav-top-wrapper li:nth-child(4):before {
+    content: "Co";
+    color: orangered;
+  }
+  .section-nav-top-wrapper a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    margin: 3px auto 0 auto;
+    background-color: yellow;
+    display: block;
+    transition: all 0.3s;
+  }
+
+  .section-nav-top-wrapper a:hover::after {
+    width: 100%;
+  }
+  /* ================
+Section Home - wrapper: 85%
+================ */
+
+  /* ======layout====== */
+  #section-home {
+    margin: 80px auto 0 auto;
+  }
+  .section-home-wrapper {
+    width: 85%;
+    padding: 10vh 0;
+  }
+
+  .section-home-div {
+    width: 80%;
+  }
+
+  /* ======section-home-div-left====== */
+
+  .section-home-div-left h1 {
+    font-size: 4.5rem;
+    line-height: 4.8rem;
+  }
+  .section-home-name::before {
+    font-size: 6rem;
+  }
+
+  /* ======section-home-div-right====== */
+  .home-contact {
+    font-size: 20px;
+  }
+  .fa-envelope {
+    font-size: 25px;
+  }
+
+  /* ================
+Section Project Banner  - wrapper: 75%
+================ */
+
+  .project-banner-wrapper {
+    width: 75%;
+  }
+
+  /* auto slider radios */
+
+  .navigation-auto {
+    width: 75%;
+  }
+
+  /* manual slider radios */
+
+  .navigation-manual {
+    width: 75%;
+  }
+
+  /* ================
+Section About  - wrapper: 65%
+================ */
+  .about-wrapper {
+    width: 65%;
+  }
+
+  /* ================
+Section Contact  - wrapper: 80%
+================ */
+  .contact-wrapper {
+    width: 80%;
+  }
+
+  /* ================
+Footer - wrapper: 85%
+================ */
+  .footer-wrapper {
+    width: 85%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+/* ================
+Labtop15  -----> Larger Monitors #################################################################################################################################################################################
+================ */
+@media screen and (min-width: 1300px) {
+
+  /* ================
+Section Home - wrapper: 70%
+================ */
+
+  .section-home-wrapper {
+    width: 70%;
+    max-width: 1400px;
+  }
+
+  /* ================
+Section Project Banner  - wrapper: 55%
+================ */
+
+  .project-banner-wrapper {
+    width: 55%;
+    max-width: 1188px;
+  }
+
+  /* auto slider radios */
+
+  .navigation-auto {
+    width: 55%;
+    max-width: 1188px;
+  }
+
+  /* manual slider radios */
+
+  .navigation-manual {
+    width: 55%;
+    max-width: 1188px;
+  }
+
+  /* ================
+Section About  - wrapper: 55%
+================ */
+  .about-wrapper {
+    width: 55%;
+    max-width: 1188px;
+  }
+
+  /* ================
+Section Contact  - wrapper: 70%
+================ */
+  .contact-wrapper {
+    width: 70%;
+    max-width: 1400px;
+  }
+
+  /* ================
+Footer - wrapper: 7%
+================ */
+  .footer-wrapper {
+    width: 70%;
+    max-width: 1400px;
+  }
+
+}
